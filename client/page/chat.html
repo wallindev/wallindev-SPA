@@ -1,0 +1,45 @@
+
+			<div id="chat-wrap" class="col-sm-9">
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<h1 class="panel-title">{{ pageTitle }}</h1>
+					</div>
+					<div class="panel-body">
+						<div id="instructions" class="small">
+							<p>1. Börja med att välja ett namn. Det kan innehålla bokstäver, siffror, tecknen "_" och "-", ska vara minst två tecken långt samt inte vara samma som en redan aktiv användare.</p>
+							<p>2. När du valt ett giltigt namn, skriv ditt meddelande i textboxen nedan.</p>
+						</div>
+						<div id="chat">
+							<input type="text" id="chat-name" placeholder="Skriv ditt namn"> <span id="chat-name-msg"></span>
+							<div id="chat-messages" tabindex="-1">
+								<div class="chat-message" ng-repeat="message in messages">
+									<span id="message_date_{{ $index }}" ng-bind="message.created | date:'short'"></span> <br>
+									<span id="message_name_{{ $index }}" ng-bind="message.name"></span>: <span id="message_message_{{ $index }}" ng-bind-html="message.message | html"></span>
+								</div>
+							</div>
+							<textarea id="chat-textarea" placeholder="Skriv ditt meddelande"></textarea>
+							<div id="chat-status">
+								Status: <span id="chat-status-text" class="text-warning"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="user-wrap" class="col-sm-3">
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<!--<h3 class="panel-title">-->Aktiva användare<!--</h3>-->
+					</div>
+					<div class="panel-body">
+						<div id="chat-users">
+							<div ng-show="!users.length">
+								Inga användare
+							</div>
+							<div class="chat-user" ng-repeat="user in users">
+								{{ user.name }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		

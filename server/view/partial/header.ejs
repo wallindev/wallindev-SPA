@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<!-- For AngularJS HTML5 routing -->
+	<base href="/">
+
+	<!-- Character encoding -->
+	<meta charset="utf-8">
+
+	<!-- Description, keywords, author -->
+	<meta name="description" content="<%= headers.description %>">
+	<meta name="keywords" content="<%= headers.keywords %>">
+	<meta name="author" content="<%= headers.author %>">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="<%= headers.assetsDir %>/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<%= headers.assetsDir %>/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="<%= headers.assetsDir %>/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800|Source+Sans+Pro:400,900,900italic|Oxygen:400,700">
+	<link rel="stylesheet" href="/css/styles.css">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/img/favicon-prompt.gif" type="image/x-icon">
+
+	<!-- Title -->
+	<title><%= headers.title %></title>
+</head>
+<body ng-app="wallinApp">
+
+	<!-- Background div -->
+	<!--<div id="background"></div>-->
+
+	<!-- Logo -->
+	<!--<div class="container">
+		<div class="masthead"><a href="/" title="WallinDev"><h1>WallinDev</h1></a></div>
+	</div>-->
+	<% include menu %>
+
+	<!-- Main container -->
+	<div id="main-container" class="container"><!--  ng-controller="<%= ngController %>" // Makes the controller run twice, handled with ngRoute instead -->

@@ -1,0 +1,56 @@
+	</div>
+<% var target = showSocket ? ' target="_self"' : ''; %>
+	<!-- Footer -->
+	<footer class="navbar navbar-inverse navbar-fixed-bottom">
+		<div class="container">
+			<ul id="copyright" class="nav navbar-nav pull-left">
+				<li><a href="/"<%- target %>>
+					<!-- TODO: Logga?! -->
+					&copy; Mikael Wallin, Wallindev <%= new Date().getFullYear(); %>
+				</a></li>
+			</ul>
+			<!-- TODO: Denna kollapsar om hög upplösning, ändra! -->
+			<ul id="socials" class="nav navbar-nav pull-right">
+				<li><a href="//www.facebook.com/100000723180308" target="_blank" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
+				<li><a href="//twitter.com/wallindev" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+				<li><a href="//www.linkedin.com/pub/mikael-wallin/20/448/a91" target="_blank" title="LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
+				<li><a href="//plus.google.com/116334440600558788227" target="_blank" title="Google Plus"><i class="fa fa-google-plus fa-2x"></i></a></li>
+				<!--<li><a href="" onclick="return false;" title="Yahoo!"><i class="fa fa-yahoo fa-2x"></i></a></li>-->
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Kontaktformulär -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Kontaktformulär</h4>
+				</div>
+				<div class="modal-body">
+					Kommer snart...<br>
+					<br>
+					Under tiden får du gärna kontakta mig på antingen e-post <a href="mailto:wallindev@gmail.com">wallindev@gmail.com</a> eller ringa på 0730-892230!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+					<button type="button" class="btn btn-primary">Skicka meddelande</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="<%= headers.assetsDir %>/jquery/dist/jquery.min.js"></script>
+	<script src="<%= headers.assetsDir %>/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="<%= headers.assetsDir %>/angular/angular.min.js"></script>
+	<script src="<%= headers.assetsDir %>/angular-route/angular-route.min.js"></script>
+	<script src="<%= headers.assetsDir %>/angular-animate/angular-animate.min.js"></script>
+	<script src="<%= headers.assetsDir %>/angular-locale/angular-locale_sv-se.js"></script>
+	<% if (showSocket) { %>
+	<script id="socketScript" src="/socket.io/socket.io.js"></script>
+	<% } %>
+	<script src="/js/spin.min.js"></script>
+	<script src="/js/script.js"></script>
+</body>
+</html>

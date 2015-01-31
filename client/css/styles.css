@@ -1,0 +1,605 @@
+/**
+ * Custom CSS
+ * ===========
+ * 
+ * Author:  Mikael Wallin
+ * Updated: January 2015
+ * 
+ *
+ * Common viewport sizes
+ *
+ * · Mobile portrait (320x480)
+ * · Mobile landscape (480x320)
+ * · Small tablet portrait (600x800)
+ * · Small tablet landscape (800x600)
+ * · Tablet portrait (768x1024)
+ * · Tablet landscape (1024x768)
+ * · Small browser window (1024x768)
+ * · Medium browser window (1280x1024)
+ * · Large browser window (1600x1200)
+ * · Large browser window (1680x1050)
+ * · X-Large browser window (1920x1080)
+ * · X-Large browser window (1920x1200)
+ *
+ * @media screen and (min-width:320px){} // mobile portrait
+ * @media screen and (min-width:480px){} // mobile landscape
+ * @media screen and (min-width:768px){} // ipad portrait
+ * @media screen and (min-width:1024px){} // browser, ipad landscape
+ * @media screen and (min-width:1200px){} // browser
+ * @media screen and (min-width:1600px){} // browser
+ *
+ *
+ * We use the following media queries in our Less files to create the key breakpoints in our grid system.
+ *
+ * Extra small devices (phones, less than 768px)
+ * No media query since this is the default in Bootstrap
+ *
+ * Small devices (tablets, 768px and up)
+ * @media (min-width: 768px) { ... }
+ *
+ * Medium devices (desktops, 992px and up)
+ * @media (min-width: 992px) { ... }
+ *
+ * Large devices (large desktops, 1200px and up)
+ * @media (min-width: 1200px) { ... }
+ *
+ * We occasionally expand on these media queries to include a max-width to limit CSS to a narrower set of devices.
+ *
+ * @media (max-width: 767px) { ... }
+ * @media (min-width: 768px) and (max-width: 991px) { ... }
+ * @media (min-width: 992px) and (max-width: 1199px) { ... }
+ * @media (min-width: 1200px) { ... }
+ *
+*/
+
+/**
+ *
+ * Google Fonts! =)
+ *
+ * Open Sans
+ * Roboto
+ * Source Sans Pro
+ * Droid Sans
+ * Droid Serif
+ * Oxygen
+ *
+ */
+
+/**
+ *
+ * Google Colors! =)
+ * 
+ * Indigo				Blue
+ * 
+ * 500		#3f51b5		500		#2196f3
+ * 
+ * 50		#e8eaf6		50		#e3f2fd
+ * 100		#c5cae9		100		#bbdefb
+ * 200		#9fa8da		200		#90caf9
+ * 300		#7986cb		300		#64b5f6
+ * 400		#5c6bc0		400		#42a5f5
+ * 500		#3f51b5		500		#2196f3
+ * 600		#3949ab		600		#1e88e5
+ * 700		#303f9f		700		#1976d2
+ * 800		#283593		800		#1565c0
+ * 900		#1a237e		900		#0d47a1
+ *
+ *						Blue accent
+ *
+ *						A100	#82b1ff
+ * 						A200	#448aff
+ * 						A400	#2979ff
+ * 						A700	#2962ff
+ *
+ */
+
+html, body {
+	/*height: 100%;*/
+	margin: 5px 0;
+}
+
+body {
+	font: normal normal 400 14px/100% "Source Sans Pro", sans-serif, Arial;
+	/*background-color: #0000FF;
+	background: rgba(0,0,255,0.5);*/
+	background-color: #82b1ff;
+
+	/* Om vi har fixed navbar */
+	/*padding-top: 30px;*/
+
+	/* För footer */
+	padding-bottom: 70px;
+}
+
+#background {
+	position: absolute;
+	border: 1px 0 1px 0 solid red;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	width: 1000px;
+	background-color: #fff;
+	/*opacity: .3;*/
+	margin-left: -500px;
+	z-index: -100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: "Oxygen", serif, Arial;
+	margin-top: 10px;
+}
+
+/* Logo masthead */
+.masthead {
+	/*display: inline-block;
+	width: 488px;
+	height: 250px;
+	background: url("../img/logo_wallindev.png") no-repeat;*/
+}
+.masthead a {
+	text-decoration: none;
+}
+.masthead a h1 {
+	font: normal small-caps 900 72px/100% "Source Sans Pro", sans-serif, Arial;
+	/* If browser doesn't support "text gradients" we fall back to color */
+	color: #222;
+	/* Webkit text gradient (top = to bottom) */
+	background: -webkit-linear-gradient(top, #3c3c3c, #222);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#menu {
+	/*margin-top: 20px;*/
+}
+
+.navbar-static-top {
+	border-top: 3px solid #e22434;
+}
+.navbar-fixed-bottom {
+	border-bottom: 3px solid #e22434;
+}
+
+.navbar-brand {
+	font-size: 24px;
+	height: 50px;
+	line-height: 26px;
+	padding: 10px 15px;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+	color: #9d9d9d;
+
+	/* Fallback color to gradient */
+	background-color: #222;
+	/* Cross-browser gradient */
+	background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+	background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	border-color: #080808;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+	color: #9d9d9d;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:active,
+.navbar-inverse .navbar-nav .open .dropdown-menu > li.active > a {
+	color: #fff;
+	/* Fallback color to */
+	background-color: #0f0f0f;
+	/* From dark to light */
+	background: linear-gradient(to bottom, #080808, #0f0f0f);
+}
+
+@media (max-width: 767px) {
+	.navbar-inverse .navbar-nav > li > a:hover,
+	.navbar-inverse .navbar-nav > li > a:focus,
+	.navbar-inverse .navbar-nav > li > a:active,
+	.navbar-inverse .navbar-nav > li.active > a {
+		color: #fff;
+		/* Fallback color to gradient */
+		background-color: #0f0f0f;
+		/* From dark to light */
+		background: linear-gradient(to bottom, #080808, #0f0f0f);
+	}
+}
+
+.dropdown-menu .divider {
+	background-color: #080808;
+}
+
+#loader {
+	position: relative;
+	width: 50px;
+	height: 50px;
+}
+
+.container {
+	/*border: 1px solid maroon;*/
+	max-width: 991px;
+	/*max-width: 767px;*/
+}
+
+#home-wrap,
+#about-wrap,
+#contact-wrap,
+#projects-wrap,
+#error-wrap {
+	border: 0px solid maroon;
+	padding: 0;
+}
+
+#main-container {
+	border: 0px solid maroon;
+	/*height: 100%;*/
+	/*background-color: #ccc;*/
+	padding: 0 25px;
+}
+
+.panel {
+	background-color: #fff;
+}
+
+.panel-default {
+	margin: 10px;
+}
+
+#projects .panel {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+.panel-inverse {
+	border-color: #080808;
+}
+.panel-inverse > .panel-heading {
+	color: #9d9d9d;
+
+	/* Fallback color to gradient */
+	background-color: #222;
+	/* Cross-browser gradient */
+	background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+	background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	border-color: #080808;
+}
+
+.panel > a.btn {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+.panel > a.btn:hover,
+.panel > a.btn:focus,
+.panel > a.btn:active {
+	color: #fff;
+	/*background-color: transparent;*/
+}
+/*
+.btn-primary {
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	color: #fff;
+}
+*/
+
+.btn-inverse {
+	color: #9d9d9d;
+
+	/* Fallback color to gradient */
+	background-color: #222;
+	/* Cross-browser gradient */
+	background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+	background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	border-color: #080808;
+}
+.btn-inverse:hover,
+.btn-inverse:focus {
+	background-color: #222;
+	background-position: 0 -15px;
+}
+.btn-inverse:active,
+.btn-inverse.active {
+	background-color: #222;
+	border-color: #080808;
+}
+
+#chat-container {
+	border: 0px solid maroon;
+	max-width: 767px;
+	/*max-width: 620px;*/
+}
+
+#chat-wrap {
+	border: 0px solid maroon;
+	max-width: 465px;
+	margin-right: 15px;
+	padding: 0;
+}
+
+#instructions {
+	margin: 0 5px;
+}
+
+#user-wrap {
+	border: 0px solid maroon;
+	max-width: 155px;
+	margin: 0;
+	padding: 0;
+}
+
+#chat {
+	width: 100%;
+}
+
+#chat-name,
+#chat-messages,
+#chat-textarea {
+	border: 1px solid #ccc;
+	/*margin: 5px;*/
+	padding: 5px;
+}
+
+#chat-name {
+	width: 65%;
+	border-bottom: 0;
+	outline: none;
+	margin-right: 10px;
+}
+
+#chat-name-msg {
+	font-weight: bold;
+}
+
+#chat-messages {
+	width: 100%;
+	height: 300px;
+	overflow-y: auto;
+	padding: 10px;
+	outline: none;
+}
+
+.chat-message {
+	margin-bottom: 10px;
+}
+
+#chat-textarea {
+	border-top: 0;
+	width: 100%;
+	max-width: 100%;
+	outline: none;
+}
+
+#chat-status {
+	margin: 10px 0 0 0;
+	padding-left: 5px;
+}
+
+#chat-status-text {
+	font-weight: bold;
+}
+
+#user-wrap .panel-heading {
+	padding: 10px;
+}
+
+#user-wrap .panel-body {
+	padding: 0;
+}
+
+#chat-users {
+	width: 100%;
+	height: 200px;
+	overflow-y: auto;
+	padding: 10px;
+	outline: none;
+}
+
+.chat-user {
+	margin-bottom: 5px;
+}
+
+#mwImg {
+	margin-top: 20px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.75);
+	box-shadow: 0 1px 2px rgba(0,0,0,.75);
+}
+@media (min-width: 768px) {
+	#mwImg {
+		margin-top: 50px;
+	}
+}
+
+#docs {
+	display: inline-block;
+	/*border: 1px solid maroon;*/
+	margin-top: 5px;
+}
+@media (min-width: 768px) {
+	#docs {
+		margin-top: 35px;
+	}
+}
+
+#map {
+	width: 700px;
+	height: 427px;
+	border: 0 none;
+	margin-top: 20px;
+
+	transition: all 500ms ease;
+}
+@media (min-width: 768px) {
+	#map {
+		width: 360px;
+		height: 220px;
+		margin-top: 0px;
+	}
+}
+#map:hover {
+	transform: scale(1.05);
+}
+
+#projects {
+	margin-top: 15px;
+}
+
+#projPreview {
+	position: relative;
+	width: 700px;
+	/*height: 350px;*/
+	/*width: 670px;*/
+	/*height: 335px;*/
+	color: #ddd;
+	margin: 15px auto;
+	overflow: hidden;
+	z-index: 99;
+}
+@media (min-width: 768px) {
+	#projPreview {
+		width: 454px;
+		/*height: 227px;*/
+	}
+}
+#projPreviewSpan {
+	width: 700px;
+	/*height: 350px;*/
+	/*width: 670px;*/
+	/*height: 335px;*/
+	color: #ddd;
+}
+@media (min-width: 768px) {
+	#projPreviewSpan {
+		width: 454px;
+		/*height: 227px;*/
+	}
+}
+#proj0,
+#proj1,
+#proj2,
+#proj3,
+#proj4 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 4px;
+	opacity: 0;
+
+	z-index: 100;
+
+	transition: opacity 1000ms ease, transform 300ms ease;
+}
+#proj0:hover,
+#proj1:hover,
+#proj2:hover,
+#proj3:hover,
+#proj4:hover {
+	transform: scale(1.05);
+}
+/*#proj{
+	visibility: hidden;
+}
+#proj_img{
+	visibility: hidden;
+}*/
+#proj0_img,
+#proj1_img,
+#proj2_img,
+#proj3_img,
+#proj4_img {
+	width: 700px;
+}
+@media (min-width: 768px) {
+	#proj0_img,
+	#proj1_img,
+	#proj2_img,
+	#proj3_img,
+	#proj4_img {
+		width: 454px;
+		/*height: 227px;*/
+	}
+}
+
+footer.navbar-inverse {
+	bottom: 5px;
+}
+/* Keep navbar links from collapsing in navbars that are not in top menu */
+#socials-square,
+footer.navbar-inverse .navbar-nav {
+	margin: 0;
+}
+#socials-square li,
+footer.navbar-inverse .navbar-nav > li {
+	float: none;
+	display: inline-block;
+}
+footer.navbar-inverse .navbar-nav > li > a {
+	margin: 10px 8px;
+	padding: 0;
+}
+footer #copyright {
+	margin-top: 3px;
+}
+
+/*#socials a,*/
+#socials-square li a {
+	color: #337ab7;
+	/*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
+	margin: 10px 10px 10px 0;
+	padding: 0;
+	background-color: transparent;
+}
+#socials-square li a:hover,
+#socials-square li a:focus,
+#socials-square li a:active {
+	color: #265a88;
+}
+
+/**
+ * Angular.js animations
+ *
+ */
+.animate {
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;*/
+	opacity: 1;
+}
+.animate.ng-enter{
+	-webkit-transition: all 750ms ease;
+	-moz-transition: all 750ms ease;
+	-o-transition: all 750ms ease;
+	transition: all 750ms ease;
+}
+.animate.ng-leave {
+}
+.animate.ng-enter {
+	opacity: 0;
+}
+.animate.ng-enter-active {
+	opacity: 1;
+}
+.animate.ng-leave {
+	opacity: 1;
+}
+.animate.ng-leave-active {
+	opacity: 0;
+}
