@@ -2,53 +2,114 @@
 			<div id="about-wrap" class="col-sm-12">
 				<div class="panel panel-inverse">
 					<div class="panel-heading">
-						<h1 class="panel-title">Om WallinDev</h1>
+						<h1 class="panel-title">Om mig</h1>
 					</div>
 					<div class="panel-body">
 
 						<div class="row">
 
 							<div class="col-sm-8">
-								
-								<h3>Senior utvecklare</h3>
-								<p class="text-justify">
-									Började koda HTML 1996 och 1997 programmerade jag min första applikation. Under mina år som både anställd och egenföretagare har jag arbetat med många olika språk, program och plattformar. Närmare beskrivning av detta framgår i mitt CV. Jag har en gedigen erfarenhet av själva hantverket, och för mig är det mer än bara ett arbete, det är en passion. Att vara egenföretagare ställer stora krav på disciplin, att våga kasta sig ut i det okända och tro på sig själv och det man gör. Att plugga två kurser parallellt, pendla mellan två orter och samtidigt både jobba deltid och ha uppdrag i sin enskilda firma visar på uthållighet, stresstålighet och målmedvetenhet. Man måste också vara flexibel och hitta lösningar, vilket jag är bra på, och det har alltid funnits en inre drivkraft som tagit mig mot de uppsatta målen. Vänner och tidigare kolleger skulle beskriva mig som noggrann, pålitlig och kvalitetsmedveten. Att hålla en hög kvalitetsnivå är viktigt för mig och jag lämnar inte ifrån mig någonting som jag inte är stolt över.
-								</p>
 
-								<h3>Wallin Systemutveckling</h3>
-								<p class="text-justify">
-									Konsultverksamhet inom IT där uppdragen har varit allt ifrån webbplatser i HTML/PHP/JavaScript/CSS till desktop-applikationer i bland annat C/C++. Har även utbildat och föreläst i olika ämnen. Att vara egenföretagare kräver självdisciplin, organisatorisk förmåga, att man är duktig på projektledning, ekonomi och har social kompetens för att kunna etablera produktiva kundrelationer.  Under dessa år har jag fått värdefull erfarenhet av företagande och jobbat både med svenska och internationella kunder. Har också blivit duktig på bokföring.
-								</p>
+								<p>Här ger jag lite information om både mig själv och om mitt företag.</p>
 
-								<h3>Språk</h3>
-								<p class="text-justify">
-									ActionScript, C/C++/C#, CSS/CSS3, HTML/HTML5, Java (Android), JavaScript (Angular.js, Node.js, jQuery, med flera), JSP, Perl, PHP, SQL, VBScript, Visual Basic
-								</p>
+								<div role="tabpanel">
 
-								<h3>Övrigt</h3>
-								<p class="text-justify">
-									Adobe Dreamweaver, Android Studio, Apache, (Twitter) Bootstrap, CVS, Eclipse, Git/GitHub, LAMP, Linux, MEAN, MongoDB, MVC, MySql, NSIS/HM Nis Edit (installations-program), Web-/PhpStorm, Sublime Text, SQL Server, Vim, Visual Studio, wyBuild (uppdateringsprogram), XML
-								</p>
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li id="bgLi" role="presentation" class="active">
+											<a id="bgBtn" href="#bg" title="Bakgrund" ng-click="showAbout(0, $event)" aria-controls="bg" role="tab" data-toggle="tab">Bakgrund</a>
+										</li>
+										<li id="kpLi" role="presentation">
+											<a id="kpBtn" href="#kp" title="Kompetenser" ng-click="showAbout(1, $event)" aria-controls="kp" role="tab" data-toggle="tab">Kompetenser</a>
+										</li>
+										<li id="wdLi" role="presentation">
+											<a id="wdBtn" href="#wd" title="Wallin Systemutveckling" ng-click="showAbout(2, $event)" aria-controls="wd" role="tab" data-toggle="tab">Wallin Systemutveckling</a>
+										</li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane fade in active" id="bg">
+
+											<p class="text-justify">
+											<strong>Programmering</strong><br>
+											Jag älskar programmering och har jobbat med det större delen av min yrkeskarriär. 1998 tog jag min examen i system- och webbutveckling och har jobbat med det till och från sedan dess, både som anställd och <a href="" onclick="$('#wdBtn').trigger('click'); return false;" title="Wallin Systemutveckling">egenföretagare</a>. Genom åren har det blivit mest webbprojekt, men också en del andra saker som desktop-applikationer och en och annan mobilapp. De senaste åren har jag både utbildat mig och jobbat inom andra områden som jag också har ett stort intresse för, bland annat psykologi, mat &amp; dryck samt ekonomi. Det har varit en kul och lärorik resa med massor av nya kunskaper och erfarenheter. Under hela denna tid har jag dock haft en fot kvar i programmeringen. Nyligen beslutade jag mig för att komma tillbaka till IT-branschen på heltid.</p>
+
+											<p class="text-justify">
+											<strong>JavaScript</strong><br>
+											I slutet av 90-talet kom jag i kontakt med Javascript och jag älskade det från första början. Sedan dess har jag lärt mig många andra programmeringsspråk, såsom PHP, Perl, C++/C#/C, Java/JSP och Visual Basic/VBScript för att nämna några. Har alltid föredragit språk i C-familjen och på senare år har det blivit mest PHP och Javascript även om jag tycker det är roligt att emellanåt använda andra språk. En sak som jag saknade när jag började använda Javascript var möjligheten att använda det på serversidan. Även om det har kommit olika lösningar sedan dess har det aldrig varit någonting jag riktigt fastnat för. Sedan kom Node(.js). Och det var kärlek vid första ögonkastet för mig. Det har allt jag vill ha; frihet, i princip oändliga utbyggnads&shy;möjligheter med NPM (Node Package Mangager) och ett stort community av entusiaster som hela tiden bidrar till att förbättra och bygga ut teknologin. Även på klientsidan har det hänt väldigt mycket de senaste åren med alla Javascript-frameworks såsom jQuery, Knockout, Backbone, Angular m fl. Jag har fastnat för Angular.js för det känns inte bara som ett bibliotek med funktioner utan som en självständig, allomfattande plattform där allting finns för att snabbt kunna utveckla avancerade SPA-webbapplikationer (Single Page Application). Att kombinera Node.js på serversidan och Angular.js på klientsidan tycker jag är oslagbart. Att Node.js både är asynkront och icke-blockerande tycker jag är både spännande och fascinerande.</p>
+
+											<!--<p class="text-justify">Genom åren har jag kommit i kontakt med många olika programmeringsspråk. Något jag tidigt fastnade för var Javascript, vilket jag hållit på med sedan slutet av 90-talet. De senaste åren har ju varit en renässans för Javascript med Node.js på serversidan och Angular.js och alla andra ramverk/plattformar på klientsidan. Allt detta älskar jag och fördjupar mig nu så mycket jag kan i denna fantastiska värld. Den här webbplatsen är en så kallad SPA (Single Page Application) utvecklad uteslutande i Javascript med bland annat Node.js/Express.js som backend och Angular.js/jQuery som frontend. All kod för detta projekt finns på <a href="//github.com/wallindev/wallindev.se" target="_blank" title="Koden för wallindev.se på GitHub">GitHub</a></p>-->
+
+											<!--<p class="text-justify">Först och främst är jag webbutvecklare, jag har arbetat många år med både frontend och backend-utveckling. Från början arbetade jag mycket i Windows-världen med ASP och senare ASP.NET. Jag har alltid föredragit programmeringsspråk i C-familjen och gillade verkligen C# när det dök upp. Jag kom också ganska snabbt in på PHP, älskade det, och har använt det sedan dess. På senare år har jag gått över mer och mer på Linux och Open Source då jag tycker det passar mig som programmerare och tekniker. Någonting som inte har förändrats är min kärlek till Javascript. När Node.js (och Express.js mm.) kom på serversidan blev jag överlycklig. För att inte tala om Angular.js och alla andra frameworks som till exempel jQuery, Knockout.js och Backbone.js på klientsidan. Just nu är det fantastiskt att vara Javascript-entusiast och jag fördjupar mig varje dag i denna underbara värld!</p>
+
+											<!--<p class="text-justify">Genom åren har jag kommit i kontakt med många olika programmeringsspråk. Något jag tidigt fastnade för var Javascript, vilket jag hållit på med sedan slutet av 90-talet. De senaste åren har ju varit en renässans för Javascript med Node.js på serversidan och Angular.js och alla andra ramverk/plattformar på klientsidan. Allt detta älskar jag och fördjupar mig nu så mycket jag kan i denna fantastiska värld. Den här webbplatsen är en så kallad SPA (Single Page Application) utvecklad uteslutande i Javascript med bland annat Node.js/Express.js som backend och Angular.js/jQuery som frontend. All kod för detta projekt finns på <a href="//github.com/wallindev/wallindev.se" target="_blank" title="Koden för wallindev.se på GitHub">GitHub</a></p>-->
+											<!--<p class="text-justify">Läs gärna mer <a href="/about" title="Om">om mig</a>, vilka <a href="/services" title="Tjänster">tjänster</a> jag erbjuder och om några av de <a href="/projects" title="Projekt">projekt</a> jag genomfört.</p>-->
+
+											<p class="text-justify">
+											<strong>Från Windows till Linux</strong><br>
+											Från början kommer jag från Windows-världen men har gradvis gått över nästan helt till Linux och Open Source. Det passar mig som programmerare och tekniker bäst. Mac har också många fördelar, men jag gillar friheten och de utvecklingsmöjligheter jag får med Linux. Numera med alla distributioner och grafiska gränssnitt som finns för Linux kombinerat med den teknikbakgrund som Linux är känt för passar mig perfekt som utvecklare.</p>
+
+										</div>
+
+										<div role="tabpanel" class="tab-pane fade" id="kp">
+
+											<p class="text-justify">
+											<strong>Egenskaper</strong><br>
+											Erfaren, driven, kreativ och mycket kvalitetsmedveten. Strävar alltid efter att det jag lämnar ifrån mig är någonting jag både kan stå för och är stolt över. Passionerad utvecklare som brinner för programmering, teknik och utbildning. Försöker hela tiden hålla mig uppdaterad med de nyaste och mest innovativa teknikerna och IT-lösningarna.</p>
+
+											<p class="text-justify">
+											<strong>Språk</strong><br>
+											ActionScript, C/C++/C#, CSS/CSS3, HTML/HTML5, Java (Android), JavaScript (Angular.js, Node.js, jQuery, med flera), JSP, Perl, PHP, SQL, VBScript, Visual Basic</p>
+
+											<p class="text-justify">
+											<strong>Övrigt</strong><br>
+											Adobe Dreamweaver, Android Studio, Apache, (Twitter) Bootstrap, CVS, Eclipse, Git/GitHub, LAMP, Linux, MEAN, MongoDB, MVC, MySql, NSIS/HM Nis Edit (installations-program), Web-/PhpStorm, Sublime Text, SQL Server, Vim, Visual Studio, wyBuild (uppdateringsprogram), XML</p>
+
+										</div>
+
+										<div role="tabpanel" class="tab-pane fade" id="wd">
+
+											<p class="text-justify">
+											<strong>Wallin Systemutveckling</strong><br>
+											År 2007 startade jag min enskilda firma, och där har jag jobbat i huvudsak med IT-uppdrag samt en del annat som till exempel föreläsningar och utbildningar. Wallin Systemutveckling är en konsultverksamhet inom IT där uppdragen är allt ifrån webbplatser i HTML/PHP/JavaScript/CSS och desktop-applikationer i bland annat C/C++ till att installera och reparera datorer.</p>
+
+											<p class="text-justify">Läs gärna mer om vilka <a href="/services" title="Tjänster">tjänster jag erbjuder</a> och om de <a href="/projects" title="Projekt">projekt jag genomfört</a>.</p>
+
+										</div>
+
+									</div>
+
+								</div>
 
 							</div>
 
-							<div class="col-sm-4 text-center">
+							<div class="col-sm-4">
 
 								<div id="docs" class="text-left">
 
-									<h3>Dokument</h3>
-									<p>Här kan du läsa mitt CV</p>
-									<p>
-										<a href="/files/CV.pdf" target="_blank" class="btn btn-primary btn-lg">Ladda ner CV</a>
-									</p>
-									<p>
-										<ul id="socials-square" class="nav navbar-nav">
-											<li><a href="//www.facebook.com/100000723180308" target="_blank" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-											<li><a href="//twitter.com/wallindev" target="_blank" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-											<li><a href="//www.linkedin.com/pub/mikael-wallin/20/448/a91" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
-											<li><a href="//plus.google.com/116334440600558788227" target="_blank" title="Google Plus"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
-										</ul>
-									</p>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h1 class="panel-title">Curriculum Vitae</h1>
+										</div>
+										<div class="panel-body">
+											<p>För att ladda ner, högerklicka och välj "Spara (länk) som...".</p>
+											<p>För att läsa direkt, klicka bara på knappen så öppnas det i ett nytt fönster.</p>
+										</div>
+										<div class="panel-footer">
+											<a href="/files/CV.pdf" title="Ladda ner CV" target="_blank" class="btn btn-primary btn-block">
+												<span class="glyphicon glyphicon-file" aria-hidden="true"></span> Ladda ner CV
+											</a>
+										</div>
+										<!--<div class="panel-footer">
+											<ul id="socials-square" class="nav navbar-nav">
+												<li><a href="//www.facebook.com/100000723180308" target="_blank" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+												<li><a href="//twitter.com/wallindev" target="_blank" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+												<li><a href="//www.linkedin.com/pub/mikael-wallin/20/448/a91" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+												<li><a href="//plus.google.com/116334440600558788227" target="_blank" title="Google Plus"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+											</ul>
+										</div>-->
+									</div>
 
 								</div>
 

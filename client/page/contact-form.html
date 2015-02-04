@@ -1,0 +1,105 @@
+	<!-- Kontaktformulär -->
+	<div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactFormLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="contactFormLabel">Kontaktformulär</h4>
+				</div>
+				<div class="modal-body">
+					<p>Jag är alltid intresserad av synpunkter, frågor eller förslag på spännande samarbeten!</p>
+					<p>Här kan du beskriva vad du har för idéer, behov eller om du kanske behöver lite hjälp för att komma igång?</p>
+					<p>Skriv några rader så lovar jag att återkomma så fort jag kan, vanligtvis inom 24 timmar.</p>
+					<p>Det går också alldeles utmärkt att kontakta mig på antingen e-post <a href="mailto:wallindev@gmail.com">wallindev@gmail.com</a> eller ringa på 0730-892230!</p>
+
+					<!--<div class="alert alert-success">
+						<span class="glyphicon glyphicon-send"></span> <strong>Tack! Ditt meddelande är skickat.</strong>
+					</div>	  
+					<div class="alert alert-danger">
+						<span class="glyphicon glyphicon-alert"></span> <strong>Någonting gick fel. Har du möjligtvis angivit något fel?</strong>
+					</div>
+
+					<form role="form" action="" method="post">
+						<div class="well well-sm">
+							<strong><i class="glyphicon glyphicon-ok form-control-feedback"></i> Required Field</strong>
+						</div>
+						<div class="form-group">
+							<label for="contactFormName" class="col-xs-3 control-label">Namn</label>
+							<div class="input-group col-xs-9">
+								<input class="form-control" name="contactFormName" id="contactFormName" placeholder="Vänligen ange namn" required="" type="text">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"> </i></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="contactFormEmail" class="col-xs-3 control-label">E-post</label>
+							<div class="input-group col-xs-9">
+								<input class="form-control" id="contactFormEmail" name="contactFormEmail" placeholder="Vänligen ange e-post" required="" type="email">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"> </i></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="contactFormMessage" class="col-xs-3 control-label">Meddelande</label>
+							<div class="input-group col-xs-9">
+								<textarea name="contactFormMessage" id="contactFormMessage" class="form-control" rows="5" required=""></textarea>
+								<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"> </i></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="contactFormAddition" class="col-xs-5 control-label">Vad är 5+5? (För att motverka spam)</label>
+							<div class="input-group col-xs-5">
+								<input class="form-control" name="contactFormAddition" id="contactFormAddition" required="" type="text">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"> </i></span>
+							</div>
+						</div>
+					</form>-->
+
+					<div class="alert alert-success">
+						<span class="glyphicon glyphicon-send"></span> <strong>Tack! Ditt meddelande är skickat.</strong>
+					</div>	  
+					<div class="alert alert-danger">
+						<span class="glyphicon glyphicon-alert"></span> <strong>Någonting gick fel. Har du möjligtvis angivit något fel?</strong>
+					</div>
+
+					<form id="contactForm" class="form-horizontal" role="form" action="" method="post">
+						<div class="well well-sm">
+							<strong><i class="glyphicon glyphicon-ok"></i> = Obligatoriskt fält</strong>
+						</div>
+						<div class="form-group has-success">
+							<label for="contactFormName" class="col-xs-2 control-label">Namn</label>
+							<div class="input-group">
+								<input id="contactFormName" type="text" class="col-xs-10 form-control" placeholder="Ange ditt namn" aria-describedby="addon-name">
+								<span class="input-group-addon" id="addon-name"><i class="glyphicon glyphicon-ok"></i></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="contactFormCompany" class="col-xs-2 control-label">Företag</label>
+							<div class="input-group">
+								<input id="contactFormCompany" type="text" class="col-xs-10 form-control" placeholder="Ange företag" aria-describedby="addon-company">
+								<span class="input-group-addon" id="addon-company"><i class="fa fa-circle-o fa-lg"></i></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="contactFormEmail" class="col-xs-2 control-label">E-post</label>
+							<div class="input-group">
+								<input id="contactFormEmail" type="text" class="col-xs-10 form-control" placeholder="Ange din e-post" aria-describedby="addon-email">
+								<span class="input-group-addon" id="addon-email"><i class="glyphicon glyphicon-ok-sign fa-lg"></i></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="contactFormMessage" class="col-xs-2 control-label">Meddelande</label>
+							<div class="input-group">
+								<input id="contactFormMessage" type="text" class="col-xs-10 form-control" placeholder="Skriv ditt meddelande" aria-describedby="addon-message">
+								<span class="input-group-addon" id="addon-message"><i class="glyphicon glyphicon-ok-circle fa-lg"></i></span>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+					<button type="button" class="btn btn-primary">Skicka meddelande</button>
+				</div>
+			</div>
+		</div>
+	</div>
+

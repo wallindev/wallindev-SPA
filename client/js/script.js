@@ -32,16 +32,22 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 		controller  : 'aboutCtrl',
 		resolve 	: { delay: 'pauseRender' } /* Overridden by ngAnimate CSS */
 	})
-	// Contact
-	.when('/contact', {
-		templateUrl : 'page/contact.html',
-		controller  : 'contactCtrl',
+	// Services
+	.when('/services', {
+		templateUrl : 'page/services.html',
+		controller  : 'servicesCtrl',
 		resolve 	: { delay: 'pauseRender' } /* Overridden by ngAnimate CSS */
 	})
 	// Projects
 	.when('/projects', {
 		templateUrl : 'page/projects.html',
 		controller  : 'projectsCtrl',
+		resolve 	: { delay: 'pauseRender' } /* Overridden by ngAnimate CSS */
+	})
+	// Contact
+	.when('/contact', {
+		templateUrl : 'page/contact.html',
+		controller  : 'contactCtrl',
 		resolve 	: { delay: 'pauseRender' } /* Overridden by ngAnimate CSS */
 	})
 	// Chat
@@ -277,28 +283,77 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 	console.log('homeCtrl is run');
 
 	setLinks(0);
-	/*$scope.pageTitle = 'WallinDevs nya webb!';
-	$scope.welcome = 'Välkommen till min nya sköna webb!';*/
 
 })
 // About controller
-.controller('aboutCtrl', function(global, func, $scope, $exceptionHandler, $sce, setLinks) {
+.controller('aboutCtrl', function(global, func, $scope, $rootScope, $exceptionHandler, $sce, setLinks, $location) {
 
 	console.log('aboutCtrl is run');
+	//console.log($rootScope.aboutTab);
 
 	setLinks(1);
-	/*$scope.pageTitle = 'Om WallinDev';
-	$scope.welcome = 'Välkommen till om-sidan!';*/
+
+	// Show last active tab on page load
+	if ($rootScope.aboutTab !== undefined) {
+		var $bgTab		= $('#bgLi'),
+			$kpTab		= $('#kpLi'),
+			$wdTab		= $('#wdLi'),
+			$bgContent 	= $('#bg'),
+			$kpContent	= $('#kp'),
+			$wdContent	= $('#wd');
+
+		$bgTab.removeClass('active');
+		$kpTab.removeClass('active');
+		$wdTab.removeClass('active');
+
+		$bgContent.removeClass('in active');
+		$kpContent.removeClass('in active');
+		$wdContent.removeClass('in active');
+
+		switch($rootScope.aboutTab) {
+			case '#bg':
+				$bgTab.addClass('active');
+				$bgContent.addClass('in active');
+				break;
+			case '#kp':
+				$kpTab.addClass('active');
+				$kpContent.addClass('in active');
+				break;
+			case '#wd':
+				$wdTab.addClass('active');
+				$kpContent.addClass('in active');
+				break;
+			default:
+				;
+		}
+	}
+
+	$scope.showAbout = function(tabNumber, e) {
+
+		// Save active tab for later use
+		$rootScope.aboutTab = e.target.hash;
+
+		// Fix rounded corners on tab content
+		var $tabContent = $('.tab-content');
+		if (tabNumber > 0) {
+			$tabContent.css('border-radius', '4px');
+		} else {
+			$tabContent.css('border-radius', '0 4px 4px');
+		}
+		//console.log($tabContent.css('border-radius'));
+
+		e.preventDefault();
+		//console.log(e.isDefaultPrevented());
+
+	}
 
 })
-// Contact controller
-.controller('contactCtrl', function(global, func, $scope, $exceptionHandler, $sce, setLinks) {
+// Services controller
+.controller('servicesCtrl', function(global, func, $scope, $exceptionHandler, $sce, setLinks) {
 
-	console.log('contactCtrl is run');
+	console.log('servicesCtrl is run');
 
 	setLinks(2);
-	/*$scope.pageTitle = 'Kontaktuppgifter';
-	$scope.welcome = 'Välkommen till kontakt-sidan!';*/
 
 })
 // Projects controller
@@ -307,8 +362,6 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 	console.log('projectsCtrl is run');
 
 	setLinks(3);
-	/*$scope.pageTitle = 'Programmeringsprojekt, webbprojekt och annat';
-	$scope.welcome = 'Nedan listar jag ett urval av de projekt jag antingen själv byggt eller varit huvudansvarig för.';*/
 
 	$scope.showPreview = function(prevNumber, e) {
 
@@ -327,29 +380,10 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 		, curImgWidth			= $previewsParent.width()
 		, curImgHeight			= $previewsParent.height();
 
-		/*console.log('width: ', $previewsParent.width());
-		console.log('height: ', $previewsParent.height());
-		console.log('innerWidth: ', $previewsParent.innerWidth());
-		console.log('innerHeight: ', $previewsParent.innerHeight());
-		console.log('outerWidth: ', $previewsParent.outerWidth());
-		console.log('outerHeight: ', $previewsParent.outerHeight());
-
-		console.log('curImgWidth: ' + curImgWidth);
-		console.log('curImgHeight: ' + curImgHeight);
-		return;*/
-
-
-		/*console.log($projShow.width());
-		console.log($projShow.height());
-		console.log($projShowUrl.width());
-		console.log($projShowUrl.height());
-		console.log($projShowImg.width());
-		console.log($projShowImg.height());*/
-		console.log('curImgWidth: ' + curImgWidth);
-		console.log('curImgHeight: ' + curImgHeight);
+		//console.log('curImgWidth: ' + curImgWidth);
+		//console.log('curImgHeight: ' + curImgHeight);
 
 		$previewsParentSpan.css('display', 'none');
-		//$previewsParentSpan.css('visibility', 'hidden');
 		for (var i = 0; i < $previewsParent.children().length - 1; i++) { // length - 1 because of the span element
 			$curProj = $('#proj' + i);
 			$curProjUrl = $('#proj' + i + '_url');
@@ -386,53 +420,17 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 
 		//$projShow.show('slow');
 
-		/*var projects = [
-			{
-				url: "/chat",
-				target: "_blank",
-				title: "Wallins Chat"
-			},
-			{
-				url: "//logcare.se",
-				target: "_blank",
-				title: "LogCare.se"
-			},
-			{
-				url: "//porsche.se",
-				target: "_blank",
-				title: "Porsche.se"
-			},
-			{
-				url: "javascript: return false;",
-				target: "_blank",
-				title: "Börsanalysföretag, C++-app"
-			},
-			{
-				url: "javascript: return false;",
-				target: "_blank",
-				title: "Börsanalysföretag, C#-app"
-			}
-		];
-
-		var $curProj = $('#proj' + prevNumber + '_img');
-
-		var $proj = $('#proj');
-		var $proj_url = $('#proj_url');
-		var $proj_img = $('#proj_img');
-
-		$previewsParentSpan.css('display', 'none');
-
-		$proj.css('visibility', 'visible');
-
-		$proj_url.attr('href', projects[prevNumber].url);
-		$proj_url.attr('target', projects[prevNumber].target);
-		$proj_url.attr('title', projects[prevNumber].title);
-
-		$proj_img.attr('src', $curProj.attr('src'));
-		$proj_img.css('visibility', 'visible');*/
-
-		//return false;
 	}
+
+})
+// Contact controller
+.controller('contactCtrl', function(global, func, $scope, $exceptionHandler, $sce, setLinks) {
+
+	console.log('contactCtrl is run');
+
+	setLinks(4);
+	/*$scope.pageTitle = 'Kontaktuppgifter';
+	$scope.welcome = 'Välkommen till kontakt-sidan!';*/
 
 })
 // Chat controller
@@ -440,7 +438,7 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 
 	console.log('chatCtrl is run');
 
-	setLinks(4);
+	setLinks(5);
 	/*$scope.pageTitle = 'Wallins Chat';
 	$scope.welcome = '<p>1. Börja med att välja ett namn. Det kan innehålla bokstäver, siffror, tecknen "_" och "-", ska vara minst två tecken långt samt inte vara samma som en redan aktiv användare.</p>\n'
 					+ '							<p>2. När du valt ett giltigt namn, skriv ditt meddelande i textboxen nedan.</p>';*/
@@ -600,6 +598,17 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 	global.$chatName.on("blur", function() {
 		func.setStatus('', 'warning', 'nick');
 	});
+})
+// Contact form controller
+.controller('contactFormCtrl', function(global, func, $scope, $exceptionHandler, $sce, setLinks) {
+
+	console.log('contactFormCtrl is run');
+
+	$scope.contactFormSubmit = function() {
+		if ($scope.contactFormName === '') {
+			
+		}
+	}
 })
 // Error controller
 .controller('errorCtrl', function(global, func, $scope, $exceptionHandler, $sce, setLinks) {
