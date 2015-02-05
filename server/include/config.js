@@ -43,7 +43,7 @@ var wallinApp = function() {
 		, PRODMODE			: true //!DEVMODE
 
 		// Title, description, keywords, author
-		, appTitle			: " "//"Wallindev.se | Node.js, Express.js, Angular.js | Wallin Systemutveckling"
+		, appTitle			: "Wallindev.se | Node.js, Express.js, Angular.js | Wallin Systemutveckling"
 		, appDescription	: "Wallindev.se - Wallin Systemutveckling, Node.js, Express.js, Angular.js och JavaScript. Webbutveckling, programmering och systemutveckling"
 		, appKeywords		: "Wallindev.se, Wallin Systemutveckling, WallinDev, Mikael Wallin, webbutveckling, programmering, systemutveckling, Node.js, Express.js, Angular.js, JavaScript"
 		, appAuthor			: "Mikael Wallin, Wallin Systemutveckling"
