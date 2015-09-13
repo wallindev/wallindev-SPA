@@ -4,13 +4,13 @@
   "authors": [
     "Mikael Wallin <wallindev@gmail.com>"
   ],
-  "description": "Wallindev's new awesome web!",
+  "description": "Wallindev's new web",
   "main": "app.js",
   "keywords": [
     "Node.js",
     "Angular.js"
   ],
-  "license": "Free",
+  "license": "MIT",
   "homepage": "http://wallindev.se",
   "private": true,
   "ignore": [
