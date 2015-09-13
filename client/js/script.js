@@ -616,7 +616,7 @@ var wallinApp = angular.module('wallinApp', ['ngRoute', 'ngAnimate'])
 	console.log('errorCtrl is run');
 
 	setLinks('error');
-	$scope.pageTitle = 'Nya Wallindev.se!';
+	$scope.pageTitle = 'Nya Wallindev';
 	$scope.errorMsg = 'Denna sida finns inte.';
 
 	setTimeout(function() {
