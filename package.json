@@ -1,37 +1,37 @@
 {
-	"name": "wallinWeb",
-	"version": "0.0.1",
-	"description": "Single page application built with Express.js on Node.js with Socket.io, Synchronize.js and MongoDB on the server side. Client-side built with Angular.js, jQuery and Bootstrap.",
-	"main": "server/index.js",
-	"dependencies": {
-		"express": "~4.10.7",
-		"ejs": "~2.1.4",
-		"mongodb": "~1.4.28",
-		"socket.io": "~1.2.1",
-		"synchronize": "~0.9.9",
-		"body-parser": "~1.10.1",
-		"cookie-parser": "~1.3.3",
-		"morgan": "~1.5.1",
-		"debug": "~2.1.1"
-	},
-	"scripts": {
-		"start": "node server"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/wallindev/wallin-web"
-	},
-	"keywords": [
-		"Single Page Application",
-		"Node.js",
-		"Express.js",
-		"Angular.js",
-		"Synchronize.js",
-		"Socket.io",
-		"MongoDB",
-		"Hogan.js"
-	],
-	"author": "Mikael Wallin, Wallindev",
-	"license": "Free",
-	"homepage": "https://github.com/wallindev/wallin-web"
+  "name": "wallinWeb",
+  "version": "0.0.1",
+  "description": "Single page application built with Express.js on Node.js with Socket.io, Synchronize.js and MongoDB on the server side. Client-side built with Angular.js, jQuery and Bootstrap.",
+  "main": "server/index.js",
+  "dependencies": {
+    "body-parser": "~1.10.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.1.1",
+    "ejs": "~2.1.4",
+    "express": "~4.10.7",
+    "mongodb": "~1.4.28",
+    "morgan": "~1.5.1",
+    "socket.io": "~1.2.1",
+    "synchronize": "~0.9.9"
+  },
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wallindev/wallin.se.git"
+  },
+  "keywords": [
+    "Single Page Application",
+    "Node.js",
+    "Express.js",
+    "Angular.js",
+    "Synchronize.js",
+    "Socket.io",
+    "MongoDB",
+    "Hogan.js"
+  ],
+  "author": "Mikael Wallin, Wallindev",
+  "license": "MIT",
+  "homepage": "https://github.com/wallindev"
 }
