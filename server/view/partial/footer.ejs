@@ -23,12 +23,12 @@
 		</div>
 	</footer>
 
-	<script src="<%= headers.assetsDir %>/jquery/dist/jquery.min.js"></script>
-	<script src="<%= headers.assetsDir %>/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="<%= headers.assetsDir %>/angular/angular.min.js"></script>
-	<script src="<%= headers.assetsDir %>/angular-route/angular-route.min.js"></script>
-	<script src="<%= headers.assetsDir %>/angular-animate/angular-animate.min.js"></script>
-	<script src="<%= headers.assetsDir %>/angular-locale/angular-locale_sv-se.js"></script>
+	<script src="<%= headers.vendorDir %>/jquery/dist/jquery.min.js"></script>
+	<script src="<%= headers.vendorDir %>/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="<%= headers.vendorDir %>/angular/angular.min.js"></script>
+	<script src="<%= headers.vendorDir %>/angular-route/angular-route.min.js"></script>
+	<script src="<%= headers.vendorDir %>/angular-animate/angular-animate.min.js"></script>
+	<script src="<%= headers.vendorDir %>/angular-locale/angular-locale_sv-se.js"></script>
 	<% if (showSocket) { %>
 	<script id="socketScript" src="/socket.io/socket.io.js"></script>
 	<% } %>

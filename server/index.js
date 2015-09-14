@@ -55,7 +55,7 @@ var wallinApp = function() {
 			description: conf.appDescription,
 			keywords: conf.appKeywords,
 			author: conf.appAuthor,
-			assetsDir: conf.assetsDir
+			vendorDir: conf.vendorDir
 		}));
 
 		next();

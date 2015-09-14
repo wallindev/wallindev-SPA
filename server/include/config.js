@@ -21,7 +21,7 @@ var wallinApp = function() {
 
 		// Directories
 		publicDir			: path.join(__dirname, '../../client')
-		, assetsDir			: path.join('/assets')
+		, vendorDir			: path.join('/vendor')
 		, modelDir			: path.join(__dirname, '../model')
 		, viewDir			: path.join(__dirname, '../view')
 		, controllerDir		: path.join(__dirname, '../controller')
