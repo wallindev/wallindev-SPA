@@ -10,8 +10,6 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 npm install wallinWeb --save
 ```
 
-
-
 ## Dependencies
 
 - [body-parser](https://github.com/expressjs/body-parser): Node.js body parsing middleware
@@ -32,4 +30,3 @@ None
 ## License
 
 MIT
-
